@@ -1,0 +1,1 @@
+.\ILRepack.2.0.18\tools\ILRepack.exe /out:.\bin\Debug\Clippy_packed.dll .\bin\Debug\Clippy.dll .\bin\Debug\Newtonsoft.Json.dll .\bin\Debug\NLog.dll

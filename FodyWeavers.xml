@@ -1,0 +1,10 @@
+﻿<Weavers xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="FodyWeavers.xsd">
+  <Costura CreateTemporaryAssemblies="true" DisableCleanup="true">
+    <IncludeAssemblies>
+      NLog
+      NLog.Windows.Forms
+      Newtonsoft.Json
+      RestSharp
+    </IncludeAssemblies>
+  </Costura>
+</Weavers>

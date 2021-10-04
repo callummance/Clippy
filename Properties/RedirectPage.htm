@@ -1,0 +1,29 @@
+﻿<html>
+    <head>
+        <script>
+            window.onload = function () {
+                let code = document.location.hash;
+                let codeQuery = code.replace(/^#/, '');
+
+                let queryUrl = "/submitcode?" + codeQuery;
+
+                let xhr = new XMLHttpRequest();
+                xhr.onreadystatechange = function() {
+                    if (this.readyState == 4 && this.status == 200) {
+                        document.getElementById("content").innerHTML = "All done, this tab will close shortly :)";
+                        setTimeout(function () {
+                            window.close()
+                        }, 5000);
+                    }
+                }
+                xhr.open("POST", queryUrl);
+                xhr.send();
+            }
+        </script>
+    </head>
+    <body>
+        <div id="content">
+            processing code...
+        </div>
+    </body>
+</html>
